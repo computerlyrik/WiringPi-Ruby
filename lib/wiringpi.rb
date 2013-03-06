@@ -51,6 +51,10 @@ module WiringPi
 
     end
 
+    def serialPut9char(char, int)
+      Wiringpi.serialPut9char( @id, char, int)
+    end
+
     def serialPuts( string )
 
       Wiringpi.serialPuts( @id, string )
