@@ -2452,7 +2452,7 @@ _wrap_serialPut9char(int argc, VALUE *argv, VALUE self) {
   int ecode3 = 0 ;
   
   if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
   }
   ecode1 = SWIG_AsVal_int(argv[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -2908,7 +2908,7 @@ SWIGEXPORT void Init_wiringpi(void) {
   rb_define_module_function(mWiringpi, "serialOpen", _wrap_serialOpen, -1);
   rb_define_module_function(mWiringpi, "serialClose", _wrap_serialClose, -1);
   rb_define_module_function(mWiringpi, "serialPutchar", _wrap_serialPutchar, -1);
-  rb_define_module_function(mWiringpi, "serialPut9char", _wrap_serialPutchar, -1);
+  rb_define_module_function(mWiringpi, "serialPut9char", _wrap_serialPut9char, -1);
   rb_define_module_function(mWiringpi, "serialPuts", _wrap_serialPuts, -1);
   rb_define_module_function(mWiringpi, "serialDataAvail", _wrap_serialDataAvail, -1);
   rb_define_module_function(mWiringpi, "serialGetchar", _wrap_serialGetchar, -1);
