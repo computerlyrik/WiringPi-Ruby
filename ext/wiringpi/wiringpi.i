@@ -28,6 +28,7 @@ extern unsigned int millis            (void) ;
 extern int   serialOpen      (char *device, int baud) ;
 extern void  serialClose     (int fd) ;
 extern void  serialPutchar   (int fd, uint8_t c) ;
+extern void  serialPut9char   (int fd, uint8_t c, int parity) ;
 extern void  serialPuts      (int fd, char *s) ;
 extern int   serialDataAvail (int fd) ;
 extern int   serialGetchar   (int fd) ;

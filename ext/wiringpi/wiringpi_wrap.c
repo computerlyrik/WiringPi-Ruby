@@ -2441,6 +2441,43 @@ fail:
   return Qnil;
 }
 
+SWIGINTERN VALUE
+_wrap_serialPut9char(int argc, VALUE *argv, VALUE self) {
+  int arg1, arg3 ;
+  uint8_t arg2 ;
+  int val1, val3 ;
+  int ecode1 = 0 ;
+  unsigned char val2 ;
+  int ecode2 = 0 ;
+  int ecode3 = 0 ;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  ecode1 = SWIG_AsVal_int(argv[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), Ruby_Format_TypeError( "", "int","serialPut9char", 1, argv[0] ));
+  } 
+  arg1 = (int)(val1);
+
+  ecode2 = SWIG_AsVal_unsigned_SS_char(argv[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "uint8_t","serialPut9char", 2, argv[1] ));
+  } 
+  arg2 = (uint8_t)(val2);
+
+  ecode3 = SWIG_AsVal_int(argv[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), Ruby_Format_TypeError( "", "int","serialPut9char", 3, argv[2] ));
+  } 
+  arg3 = (int)(val3);
+
+
+  serialPut9char(arg1,arg2,arg3);
+  return Qnil;
+fail:
+  return Qnil;
+}
 
 SWIGINTERN VALUE
 _wrap_serialPuts(int argc, VALUE *argv, VALUE self) {
@@ -2871,6 +2908,7 @@ SWIGEXPORT void Init_wiringpi(void) {
   rb_define_module_function(mWiringpi, "serialOpen", _wrap_serialOpen, -1);
   rb_define_module_function(mWiringpi, "serialClose", _wrap_serialClose, -1);
   rb_define_module_function(mWiringpi, "serialPutchar", _wrap_serialPutchar, -1);
+  rb_define_module_function(mWiringpi, "serialPut9char", _wrap_serialPutchar, -1);
   rb_define_module_function(mWiringpi, "serialPuts", _wrap_serialPuts, -1);
   rb_define_module_function(mWiringpi, "serialDataAvail", _wrap_serialDataAvail, -1);
   rb_define_module_function(mWiringpi, "serialGetchar", _wrap_serialGetchar, -1);
