@@ -72,6 +72,10 @@ module WiringPi
     def serialParity (int)
       Wiringpi.serialParity(@id, int)
     end
+    
+    def serialFlush()
+      Wiringpi.serialFlush(@id)
+    end
 
   end
 

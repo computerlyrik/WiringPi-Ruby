@@ -32,4 +32,5 @@ extern void  serialPuts      (int fd, char *s) ;
 extern int   serialDataAvail (int fd) ;
 extern int   serialGetchar   (int fd) ;
 extern void  serialParity    (int fd, int parity) ;
+extern void  serialFlush    (int fd) ;
 extern void  serialPrintf    (int fd, char *message, ...) ;
